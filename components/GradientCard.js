@@ -1,20 +1,24 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-// import LinearGradient from 'react-native-linear-gradient';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const gradientCard = props => {
     return (
-        <View >
-            <Text style={styles.cardTitle}>{props.title}</Text>
-        </View>        
+        <LinearGradient 
+            colors={['#FD6175', '#FD795F']}
+            style={styles.headerGradient}
+            start={[-0.1, 0.1]}
+            >
+            <View >
+                <Text style={styles.cardTitle}>{props.title}</Text>
+            </View>   
+        </LinearGradient>     
     );
 }
 
 const styles = StyleSheet.create({
     card: {
         padding: 30,
-        // backgroundColor: '#FD6175',
-        //to #FD795F
     },
     cardTitle: {
         fontSize: 15,
